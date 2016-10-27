@@ -25,8 +25,10 @@ $(document).ready(function() {
   $("#operation").submit(function() {
     event.preventDefault();
 
-  var numberSelection = $(".numberEntry").val();
-  var result = replace(numberSelection);
+    $("ul").empty();
+
+    var numberSelection = $(".numberEntry").val();
+    var result = replace(numberSelection);
   // var ourFinalResult = "";
   // function finalResult(result) {
   //   for(i=0; i< result.length; i++) {
@@ -37,7 +39,6 @@ $(document).ready(function() {
 
 // consoleLog(result);
 
-  $(".output").show();
   $(".resultHere").text(result);
 
   });
