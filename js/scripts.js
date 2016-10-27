@@ -1,9 +1,7 @@
 // business logic
-// var number = [1,2,3,4,5,6]
 var userInputs = 0;
 var textResult = "";
 var numberArray = [];
-// replace.length = parseInt(userInputs);
 function replace(userInputs) {
   for(var i=1; i<=userInputs; i++) {
     if(i%15 === 0) {
@@ -16,15 +14,7 @@ function replace(userInputs) {
       textResult = i;
     }
     numberArray.push(textResult);
-//     // if(text%15) {
-//     //   text = PingPong;
-//     // } else if (text%3) {
-//     //   text = Ping;
-//     // } else if (text%5) {
-//     //   text = Pong;
-//     // } else {
-//     //   text = text;
-//     // }
+
   }
   return numberArray;
 }
@@ -37,6 +27,14 @@ $(document).ready(function() {
 
   var numberSelection = $(".numberEntry").val();
   var result = replace(numberSelection);
+  // var ourFinalResult = "";
+  // function finalResult(result) {
+  //   for(i=0; i< result.length; i++) {
+  //     $(finalResult).append(result[i]);
+  //   }
+  //   return ourFinalResult
+  // }
+
 // consoleLog(result);
 
   $(".output").show();
