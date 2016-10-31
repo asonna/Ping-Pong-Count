@@ -20,12 +20,12 @@
           <h4>Created by:</h4>
           <h5>Annie Sonna</h5><br>
           <h4>Github Username/URL:</h4>
-          <h5>asonna/ping-pong-count</h5><br>
+          <h5 id=projectLink>asonna/ping-pong-count</h5><br>
           <h4>Code review week3 for:</h4>
           <h5>Introduction to programming</h5><br>
         </div>
-        <div class="col-md-8" id=operation>
-          <form>
+        <div class="col-md-5" id=operation>
+          <form id=form>
             <h2>Let's play</h2>
             <h3>Rules</h3>
             <p>Ping Pong will count from 1 up to your number and assuming the following exceptions:</p>
@@ -36,12 +36,17 @@
             </ol>
             <label for="number">Enter your number here:</label>
             <input type="integer" class="numberEntry" id="inp">
-            <button type="submit" class="btn">Ping Pong!</button><br>
+            <button type="submit" class="btn">Ping Pong!</button>
+            <br>
             <br>
           </form>
-          <div class="output">
-          <ul class=resultHere></ul>
+          <div id="output">
+          <ul class=resultHere>
+          </ul>
           </div>
+        </div>
+        <div class="col-md-4">
+          <img src="img/pingpong.jpg" alt="" />
         </div>
       </div>
 

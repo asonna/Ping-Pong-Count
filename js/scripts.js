@@ -1,22 +1,26 @@
 // business logic
 var userInputs = 0;
 var textResult = "";
-var numberArray = [];
-function replace(userInputs) {
-  for(var i=1; i<=userInputs; i++) {
-    if(i%15 === 0) {
-      textResult = "PingPong";
-    } else if (i%3 === 0) {
-      textResult = "Ping";
-    } else if (i%5 === 0) {
-      textResult = "Pong";
-    } else {
-      textResult = i;
-    }
-    numberArray.push(textResult);
+var numberArrays = [];
 
+function replace(userInputs) {
+  if(userInputs > 0) {
+    for(var i=1; i<=userInputs; i++) {
+      if(i%15 === 0) {
+        textResult = "PingPong";
+      } else if (i%3 === 0) {
+        textResult = "Ping";
+      } else if (i%5 === 0) {
+        textResult = "Pong";
+      } else {
+        textResult = i;
+      }
+      numberArrays.push(textResult);
+    }
+    return numberArrays;
+  } else {
+    alert("Please enter a number greater than 0!");
   }
-  return numberArray;
 }
 
 
@@ -24,22 +28,19 @@ function replace(userInputs) {
 $(document).ready(function() {
   $("#operation").submit(function() {
     event.preventDefault();
+    $("#inp").empty();
 
-    $("ul").empty();
-
+    var numberSelection = 0;
+    var results = [];
     var numberSelection = $(".numberEntry").val();
-    var result = replace(numberSelection);
-  // var ourFinalResult = "";
-  // function finalResult(result) {
-  //   for(i=0; i< result.length; i++) {
-  //     $(finalResult).append(result[i]);
-  //   }
-  //   return ourFinalResult
-  // }
+    var results = replace(numberSelection);
+    $("#output ul").empty();
 
-// consoleLog(result);
+    results.forEach(function(result) {
+      $("#output ul").append("<li>" + result + "</li>");
+    });
 
-  $(".resultHere").text(result);
+      $(".output ul").text();
 
   });
 });
