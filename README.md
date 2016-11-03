@@ -13,7 +13,7 @@ This game will count up to the user inputted number while replacing some numbers
 ## Setup/Installation Requirements
 * _Code was design and built using HTML and CSS file in Atom_
 * _Then the two files were uploaded into a github repository_
-* _To view the code, try to open the HTML file in a web browser at: https://asonna.github.io/ping-pong-game
+* _To view the code, try to open the HTML file in a web browser at: https://asonna.github.io/ping-pong-count/
 
 ## Technologies Used
 * _HTML_
