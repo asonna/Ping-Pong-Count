@@ -1,9 +1,7 @@
 // business logic
-var userInputs = 0;
-var textResult = "";
-var numberArrays = [];
-
 function replace(userInputs) {
+  var numberArrays = [];
+  var textResult = "";
   if(userInputs > 0) {
     for(var i=1; i<=userInputs; i++) {
       if(i%15 === 0) {
